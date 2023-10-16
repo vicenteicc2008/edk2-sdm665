@@ -6,4 +6,4 @@ set -e
 GCC5_AARCH64_PREFIX=aarch64-linux-gnu- build -j$(nproc) -s -n 0 -a AARCH64 -t GCC5 -p MiA2Pkg/MiA2Pkg.dsc
 gzip -c < workspace/Build/MiA2Pkg/DEBUG_GCC5/FV/MIA2PKG_UEFI.fd >uefi_image
 cat ginkgo.dtb >>uefi_image
-abootimg --create uefi.img -k uefi_image -r ramdisk-null -f bootimg.cfg
+mkbootimg --kernel uefi_image -o uefi.img
