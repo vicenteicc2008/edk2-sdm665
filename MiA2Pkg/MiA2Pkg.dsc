@@ -108,9 +108,9 @@
 
   gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVersionString|L"Alpha"
 
-  # System Memory (3GB)
-  gArmTokenSpaceGuid.PcdSystemMemoryBase|0x40000000
-  gArmTokenSpaceGuid.PcdSystemMemorySize|0xA0000000
+  # System Memory (4GB)
+  gArmTokenSpaceGuid.PcdSystemMemoryBase|0x80000000
+  gArmTokenSpaceGuid.PcdSystemMemorySize|0x100000000
 
   # We only boot one processor here!
   gArmPlatformTokenSpaceGuid.PcdCoreCount|1
@@ -123,8 +123,8 @@
   #
   # ARM General Interrupt Controller
   #
-  gArmTokenSpaceGuid.PcdGicDistributorBase|0x17a00000
-  gArmTokenSpaceGuid.PcdGicRedistributorsBase|0x17b00000
+  gArmTokenSpaceGuid.PcdGicDistributorBase|0xf200000
+  gArmTokenSpaceGuid.PcdGicRedistributorsBase|0xf300000
 
   gArmTokenSpaceGuid.PcdArmArchTimerIntrNum|0x12
   gArmTokenSpaceGuid.PcdArmArchTimerVirtIntrNum|0x13
@@ -149,7 +149,7 @@
   #
   gEfiMdeModulePkgTokenSpaceGuid.PcdEmuVariableNvModeEnable|TRUE
 
-  gMiA2PkgTokenSpaceGuid.PcdMipiFrameBufferAddress|0x9d400000
+  gMiA2PkgTokenSpaceGuid.PcdMipiFrameBufferAddress|0x5c000000
   gMiA2PkgTokenSpaceGuid.PcdMipiFrameBufferWidth|1080
   gMiA2PkgTokenSpaceGuid.PcdMipiFrameBufferHeight|2340
 
