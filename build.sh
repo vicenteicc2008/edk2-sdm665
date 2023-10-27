@@ -7,8 +7,8 @@ GCC5_AARCH64_PREFIX=aarch64-linux-gnu- build -j$(nproc) -s -n 0 -a AARCH64 -t GC
 gzip -c < workspace/Build/MiA2Pkg/DEBUG_GCC5/FV/MIA2PKG_UEFI.fd >uefi_image
 cat ginkgo.dtb >>uefi_image
 python3 ./mkbootimg.py \
-  --kernel ./ImageResources/bootpayload.bin \
-  --ramdisk ./ImageResources/ramdisk \
+  --kernel ./uefi_image \
+  --ramdisk ./ramdisk-null \
   --kernel_offset 0x00000000 \
   --ramdisk_offset 0x00000000 \
   --tags_offset 0x00000000 \
