@@ -15,5 +15,4 @@ python3 ./mkbootimg.py \
   --os_version 13.0.0 \
   --os_patch_level "$(date '+%Y-%m')" \
   --header_version 1 \
-  -o uefi.img \
-  ||_error "\nFailed to create Android Boot Image!\n"
+  -o uefi.img
